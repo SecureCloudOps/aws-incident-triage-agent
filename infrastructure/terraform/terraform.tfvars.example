@@ -1,0 +1,13 @@
+aws_region      = "us-east-1"
+name_prefix     = "buggy-service"
+container_image = "<AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/buggy-service@sha256:<IMAGE_DIGEST>"
+
+# The service is public by default for this demo. Replace this with your IP/CIDR.
+allowed_ingress_cidrs = ["203.0.113.10/32"]
+
+# Set ARM64 if the image was built for ARM rather than linux/amd64.
+cpu_architecture = "X86_64"
+
+tags = {
+  Environment = "demo"
+}

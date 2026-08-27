@@ -1,0 +1,32 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.ruff_cache/
+
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+
+# Generated incident evidence can contain operational identifiers.
+incidents/*
+!incidents/.gitkeep
+
+# Terraform local state and generated artifacts
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+infrastructure/terraform/tfplan*
+terraform.tfvars
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Editor and OS metadata
+.DS_Store
+.idea/
+.vscode/
