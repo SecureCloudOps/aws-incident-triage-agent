@@ -1,0 +1,11 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Generated dependency and bytecode directories are never publishable inputs"
+paths = [
+  '''(^|/)\.terraform/''',
+  '''(^|/)\.venv/''',
+  '''(^|/)__pycache__/''',
+]
+
